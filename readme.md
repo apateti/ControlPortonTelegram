@@ -8,7 +8,7 @@ Para Configurar inicialmente el Equipo, debe crearse un BOT y el primer usuario 
 El Hardware utilizado es:<br>
 <img src="https://user-images.githubusercontent.com/50499248/113430498-4b2d9780-93a8-11eb-92f9-6c06a9d8ed46.jpg"><br>
 API del ESP32 controlador del Porton:
-> **Comando: <STRONG>Toggle LED</STRONG>**<br>
+> **Comando: <font color="#FF5733">Toggle LED</font>**<br>
 Se Tx:<br>
 `{ "cmdo" : "toggle", "data" : { "userName" : "Nombre del Usuario" "userID" : 123456789 } }`<br>
 Se Rx<br>
