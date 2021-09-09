@@ -979,7 +979,19 @@ bool configWiFi(String ssidSTA, String passSTA){
     Serial.println(nameHost);
     Serial.println("\nRutina conectAP");
   #endif
-  IPAddress addrIP;
+  IPAddress addrIP(0,0,0,0);
+  int Intentos = 0;
+  WiFi.persistent(true);
+  WiFi.config(addrIP, addrIP, addrIP);
+  WiFi.begin("", "");
+  while (WiFi.status() != WL_CONNECTED && Intentos < 5){
+    delay(100);
+    Intentos++;
+  }
+  //ESP.eraseConfig();
+  //ESP32.eraseConfig();
+  WiFi.persistent(false);
+  delay(500);
   IPAddress addrGat;
   IPAddress addrSub;
   IPAddress primaryDNS(8, 8, 8, 8); //optional
